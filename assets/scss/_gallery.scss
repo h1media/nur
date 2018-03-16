@@ -1,0 +1,8 @@
+#gallery-1 .gallery-item {
+    @include md {
+      width:25%!important;
+    }
+    @include sm {
+      width: 50%!important;
+    }
+}

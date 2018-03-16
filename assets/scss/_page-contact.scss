@@ -1,0 +1,27 @@
+.contact {
+  .col-12 {
+    @include no-column(1!important, 0px!important);
+  }
+}
+.page-id-48 {
+  .main-content {
+    padding-top: 30px;
+    .article {
+      padding: 0 100px!important;
+      @include md() {
+        padding:0!important;
+      }
+    }
+    p {
+      margin-bottom: 90px;
+      img {
+        margin-bottom: 5px;
+        @include scale(.70);
+        transform-origin: left;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}

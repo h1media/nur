@@ -1,0 +1,223 @@
+.main-content {
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .featured {
+    text-align: center;
+    @include featured;
+    text-transform: uppercase;
+    margin: 0px -15px 30px -15px;
+    border-bottom: 1px solid $red;
+    padding-bottom: 0px;
+    p {
+      font-size: rem(28);
+      line-height: rem(35);
+      @include sm() {
+        font-size: rem(22);
+        line-height: rem(26);
+      }
+    }
+  }
+
+  .article {
+    padding-bottom: 30px;
+    a {
+      text-decoration: underline;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      margin-bottom: rem(16);
+      @include base-font;
+      @include sm() {
+        font-size: rem(16);
+        line-height: rem(18);
+        margin-bottom: rem(16);
+      }
+      li {
+        padding-left: 13px;
+        &:before {
+          @include list-style;
+          color: $red;
+          margin-left: -13px;
+        }
+      }
+    }
+    h4 {
+      color: $red;
+      margin-bottom: 0;
+      font-size: rem(18);
+    }
+    strong {
+      font-weight: 500;
+    }
+    .col-12 {
+      @include no-column(2, 30px);
+      p {
+        margin-top: 0;
+      }
+      @include sm {
+        @include no-column(1, 0px);
+      }
+    }
+  }
+
+  .article-body {
+    padding-bottom: 30px;
+    a {
+      text-decoration: underline;
+    }
+    .col-12 {
+      @include no-column(2, 30px);
+      ul {
+        @include base-font;
+        @include sm() {
+          font-size: rem(16);
+          line-height: rem(18);
+          margin-bottom: rem(16);
+        }
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        margin-bottom: rem(16);
+        li {
+          &:before {
+            @include list-style;
+          }
+        }
+      }
+      h4 {
+        margin-bottom: 0;
+        font-size: rem(18);
+      }
+      strong {
+        font-weight: 500;
+      }
+      @include sm {
+        @include no-column(1, 0px);
+      }
+    }
+  }
+
+  .expertise {
+    justify-content: space-between;
+    @include tablet {
+      justify-content: center;
+    }
+    @include sm {
+      justify-content: space-between;
+    }
+    @include mini {
+      justify-content: center;
+    }
+
+    .expertise-heading {
+      @include featured;
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 15px 0;
+    }
+
+    .expertise-column {
+      h4 {
+        line-height: rem(20);
+        min-height: 40px;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        margin-bottom:25px;
+        list-style-type: none;
+        @include base-font;
+        @include sm() {
+          font-size: rem(16);
+          line-height: rem(18);
+
+        }
+        li {
+          padding-left: 13px;
+          &:before {
+            @include list-style;
+            margin-left: -13px;
+          }
+        }
+
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+      .expertise-value {
+        padding: 0;
+      }
+    }
+
+    .col-lg-2.expertise-column {
+      flex: 0 0 19%;
+      max-width: 19%;
+      padding: 0;
+
+      @include tablet {
+          flex: 0 0 32%!important;
+          max-width: 32%!important;
+          padding: 1%!important;
+      }
+
+      @include sm {
+          flex: 0 0 49%!important;
+          max-width: 49%!important;
+          padding: 1%!important;
+      }
+      @include mini {
+          flex: 0 0 260px!important;
+          max-width: 260px!important;
+          padding: 0!important;
+      }
+    }
+
+  }
+  .article-footer {
+    text-align: center;
+    border-top: 1px solid $red;
+    padding: 20px 0 20px 0;
+    @include featured;
+    text-transform: uppercase;
+    img {
+      margin-bottom: 5px;
+    }
+    p {
+      margin-top: 20px;
+      @include featured;
+      text-transform: uppercase;
+      a {
+        text-decoration: underline;
+      }
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+  .article-footer.comp {
+    padding: 20px 100px;
+    @include tablet {
+      padding: 20px 0;
+    }
+    p {
+      text-transform: none;
+    }
+  }
+}
+.main-content.1-column {
+  .article {
+    .col-12 {
+      @include no-column(1, 0px);
+    }
+  }
+}

@@ -1,0 +1,162 @@
+.header {
+  display: block;
+  height: 670px;
+  position: relative;
+  background: $mainGrey url('../images/main-bcg.jpg');
+  margin-bottom: 20px;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+  background-position: center center!important;
+  .logo {
+    margin-bottom:40px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    @include sm() {
+      text-align: center;
+      max-width: 85%;
+      height: auto;
+    }
+  }
+  .social-top {
+    display: block;
+    text-align: right;
+    @include sm() {
+      text-align: center;
+    }
+    a.social {
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      border: white solid 1px;
+      color: white;
+      text-align: center;
+      margin: 0 3px;
+      &:hover {
+        background: white;
+        color: $red;
+        transition:.3s;
+      }
+      span {
+        line-height: 30px;
+        font-size: rem(14);
+      }
+    }
+    a.contact-us-button {
+      width: auto;
+      background:rgba(255,255,255,.7);
+      color: black;
+      margin: 0 3px;
+      height: 30px;
+      display: inline-block;
+      padding: 0 10px;
+      text-transform: uppercase;
+      line-height: 30px;
+      font-size: rem(14);
+      border:1px solid;
+      border-color:rgba(255,255,255,.1);
+    }
+  }
+  .social-top.reversed {
+    a.social {
+      border: $red solid 1px;
+      color: $red;
+    }
+  }
+  .menu-holder {
+    ul {
+      list-style-type: none;
+      text-align: center;
+      margin: 0;
+    }
+    li {
+      display: inline-block;
+      float: none;
+    }
+  }
+  .header-title {
+    position: absolute;
+    bottom:40px;
+    right: 0;
+    font-size: rem(34);
+    line-height: rem(38);
+    padding: 12px 25px;
+    background: black;
+    text-transform: uppercase;
+    background: rgba(69,87,101, .7);
+    color: white;
+    line-height: 33px;
+    text-align: right;
+    @include sm() {
+      text-align: center;
+      font-size: rem(28);
+      line-height: rem(32);
+    }
+    p{
+      margin: 0;
+      font-size: rem(34);
+      line-height: rem(38);
+      @include sm() {
+        text-align: center;
+        font-size: rem(28);
+        line-height: rem(32);
+      }
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .header-holder {
+    position: fixed;
+    padding-top: 15px;
+    z-index: 10;
+    @include sm() {
+      position: relative;
+    }
+
+    
+    .logo  {
+      img {
+        @include scale(1.0);
+        transform-origin: left;
+        transition: all .2s ease-in-out;
+      }
+    }
+  }
+  .header-sticky {
+    background: rgba(255,255,255,.8);
+    padding-top: 7px;
+    @include sm() {
+      padding-top: 15px;
+      background:none;
+    }
+
+    .logo {
+      margin-bottom: 7px;
+      @include sm() {
+        margin-bottom: 40px;
+      }
+      img {
+        @include scale(.80);
+        transform-origin: left;
+        transition: all .2s ease-in-out;
+        @include sm() {
+          @include scale(1.0);
+        }
+      }
+    }
+
+    .social-top {
+      .social {
+        border:1px solid $red;
+        color:$red;
+        @include sm() {
+          border:1px solid white;
+          color:white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.error404 {
+  .main-content {
+    .col-12 {
+      @include no-column(1,0px);
+    }
+    text-align: center;
+    h1 {
+      text-align: center;
+      font-size: rem(90);
+    }
+    p {
+      line-height: rem(90);
+    }
+    a {
+      @include button;
+      margin-top: 50px;
+      text-decoration: none;
+    }
+  }
+}
