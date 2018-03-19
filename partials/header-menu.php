@@ -3,7 +3,7 @@ $color  = get_field( 'revers_social_colors' );
 	?>
 	<div class="mobile-nav menu-holder
 	<?php
-	if( $color['value'] ) {
+	if ( $color['value'] ) {
 	    ?>
 	    color-<?php echo esc_html( $color['value'] ); ?>
 	    <?php
