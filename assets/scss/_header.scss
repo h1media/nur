@@ -1,12 +1,24 @@
 .header {
   display: block;
-  height: 670px;
+  height: 610px;
   position: relative;
   background: $mainGrey url('../images/main-bcg.jpg');
-  margin-bottom: 20px;
   background-repeat: no-repeat!important;
   background-size: cover!important;
   background-position: center center!important;
+
+  .top {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   .logo {
     margin-bottom:40px;
     img {
@@ -15,13 +27,20 @@
     }
     @include sm() {
       text-align: center;
-      max-width: 85%;
+      max-width: 70%;
       height: auto;
     }
   }
   .social-top {
-    display: block;
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
     @include sm() {
       text-align: center;
     }
@@ -33,6 +52,9 @@
       color: white;
       text-align: center;
       margin: 0 3px;
+      @include sm() {
+        margin-bottom: rem(10);
+      }
       &:hover {
         background: white;
         color: $red;
@@ -56,6 +78,12 @@
       font-size: rem(14);
       border:1px solid;
       border-color:rgba(255,255,255,.1);
+      @include sm() {
+        margin-bottom: rem(10);
+      }
+    }
+    a.get {
+      background: $main;
     }
   }
   .social-top.reversed {
@@ -75,38 +103,6 @@
       float: none;
     }
   }
-  .header-title {
-    position: absolute;
-    bottom:40px;
-    right: 0;
-    font-size: rem(34);
-    line-height: rem(38);
-    padding: 12px 25px;
-    background: black;
-    text-transform: uppercase;
-    background: rgba(69,87,101, .7);
-    color: white;
-    line-height: 33px;
-    text-align: right;
-    @include sm() {
-      text-align: center;
-      font-size: rem(28);
-      line-height: rem(32);
-    }
-    p{
-      margin: 0;
-      font-size: rem(34);
-      line-height: rem(38);
-      @include sm() {
-        text-align: center;
-        font-size: rem(28);
-        line-height: rem(32);
-      }
-      strong {
-        font-weight: 500;
-      }
-    }
-  }
 
   .header-holder {
     position: fixed;
@@ -116,8 +112,10 @@
       position: relative;
     }
 
-    
     .logo  {
+      @include lg() {
+
+      }
       img {
         @include scale(1.0);
         transform-origin: left;
@@ -126,7 +124,7 @@
     }
   }
   .header-sticky {
-    background: rgba(255,255,255,.8);
+    background: rgba($mainGrey,.8);
     padding-top: 7px;
     @include sm() {
       padding-top: 15px;
@@ -142,19 +140,70 @@
         @include scale(.80);
         transform-origin: left;
         transition: all .2s ease-in-out;
-        @include sm() {
+        @include tablet() {
           @include scale(1.0);
         }
       }
     }
 
     .social-top {
+      margin-top: rem(17);
       .social {
-        border:1px solid $red;
-        color:$red;
+
         @include sm() {
           border:1px solid white;
           color:white;
+        }
+      }
+    }
+  }
+
+  .titles-holder {
+    background: rgba($main, .9);
+    position: absolute;
+    bottom: 0;
+
+    .header-title {
+      display: block;
+      width:100%;
+      font-size: rem(34);
+      line-height: rem(38);
+      padding: rem(14) rem(25);
+      line-height: 33px;
+      text-align: center;
+      color: nearBlack;
+      border-bottom: 1px solid $nearBlack;
+      margin-bottom: rem(6);
+      @include sm() {
+        text-align: center;
+        font-size: rem(28);
+        line-height: rem(32);
+      }
+      p{
+        margin: 0;
+        font-size: rem(38);
+        line-height: rem(38);
+        @include sm() {
+          text-align: center;
+          font-size: rem(28);
+          line-height: rem(32);
+        }
+        strong {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .featured {
+      text-align: center;
+      @include featured;
+      padding-bottom: 0px;
+      p {
+        font-size: rem(22);
+        line-height: rem(30);
+        @include sm() {
+          font-size: rem(22);
+          line-height: rem(26);
         }
       }
     }

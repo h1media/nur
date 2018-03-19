@@ -24,6 +24,12 @@
   text-overflow: $overflow; // values are: clip, ellipsis, or a string
 }
 
+@mixin lg {
+  @media only screen and (max-width: $lg) {
+    @content;
+  }
+}
+
 @mixin md {
   @media only screen and (max-width: $lg) {
     @content;
