@@ -2,14 +2,15 @@
 $revers = get_field( 'revers_social_colors' );
 if ( $revers ) {
 	?>
-	<div class="col-md-6 col-sm-12 social-top no-print reversed">
+	<div class="social-top no-print reversed">
 <?php
 } else {
 	?>
-	<div class="col-md-6 col-sm-12 social-top no-print">
+	<div class="social-top no-print">
 <?php
 }
 ?>
+        <div class="social-top-holder">
 		<?php
 		$facebook = get_field( 'atm_facebook', 'options' );
 		$twitter  = get_field( 'atm_twitter', 'options' );
@@ -30,4 +31,6 @@ if ( $revers ) {
 		<?php
 		}
 		?>
+        </div>
+		<?php get_template_part( 'partials/header-menu' ); ?>
 	</div>

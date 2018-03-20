@@ -1,15 +1,15 @@
 <?php
-$revers = get_field( 'revers_social_colors' );
-if ( $revers ) {
+$color  = get_field( 'revers_social_colors' );
 	?>
-	<div class="mobile-nav menu-holder reversed-main">
-<?php
-} else {
-	?>
-	<div class="mobile-nav menu-holder">
-<?php
-}
-?>
+	<div class="mobile-nav menu-holder
+	<?php
+	if ( $color['value'] ) {
+	    ?>
+	    color-<?php echo esc_html( $color['value'] ); ?>
+	    <?php
+	}
+	?>">
+
     <div id="nav-icon1">
         <span></span>
         <span></span>

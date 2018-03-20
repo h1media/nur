@@ -1,4 +1,4 @@
-<div class="col-md-6 col-sm-12 logo">
+<div class="logo">
 	<?php $atm_logo = get_field( 'atm_custom_logo' );
 	$atm_main_logo  = get_field( 'atm_logo', 'options' );
 	if ( ! empty( $atm_logo['url'] ) && ! empty( $atm_logo['title'] ) ) { ?>

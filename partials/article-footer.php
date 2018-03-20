@@ -1,7 +1,9 @@
+<?php
+$footer_logo = get_field( 'atm_footer_bcg', 'options' );
+$footer_text = get_field( 'atm_footer_text', 'options' );
+?>
 <div class="row article-footer">
 	<?php
-	$footer_logo = get_field( 'atm_footer_logo', 'options' );
-	$footer_text = get_field( 'atm_footer_text', 'options' );
 	if ( ! empty( $footer_logo['url'] ) ) {
 		?>
         <div class="col-12">

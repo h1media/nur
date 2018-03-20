@@ -41,8 +41,8 @@ a:active {
 }
 
 p {
-  font-size: rem(17);
-  line-height: rem(19);
+  font-size: rem(18);
+  line-height: rem(22);
   font-family: 'Gotham';
   @include sm() {
     font-size: rem(15);

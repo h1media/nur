@@ -1,16 +1,23 @@
 .header .menu-holder {
-  .responsive-menu {
-    background-color: $red;
-  }
-  .menu-header-menu-container {
+
+  .menu-main-menu-container {
     height: 30px;
+    margin-top: rem(10);
     ul {
+      @include tablet() {
+        text-align: center;
+      }
+      padding-left: 0;
       li {
         position: relative;
         line-height: 30px;
-        padding: 0 13px;
-        @include tablet() {
-          padding: 0 10px;
+        padding: 0 8px;
+        @include lg() {
+          padding: 0 5px;
+        }
+
+        &:last-child {
+          padding-right: 0;
         }
         a {
           font-family:'GothamBook';
@@ -29,12 +36,12 @@
           display: none;
         }
         ul.sub-menu {
-          background: $red;
+          background: rgba($mainGrey,.8);
           visibility: hidden;
           float: left;
           min-width: 250px;
           position: absolute;
-          left: 15px;
+          left: 10px;
           z-index: 999;
           padding: 0;
           @include sm() {
@@ -46,10 +53,6 @@
             padding: 0 8px;
             width: 100%;
             text-align: left;
-            border-bottom: 1px solid white;
-            &:last-of-type {
-              border-bottom: none;
-            }
           }
           li:hover {
           }
@@ -134,6 +137,7 @@
 }
 
 @include sm() {
+
   #menu-main-menu {
     padding: 0;
     margin:0;
@@ -148,16 +152,17 @@
   }
   .responsive-menu {
     display: none!important;
-    .menu-header-menu-container {
+    .menu-main-menu-container {
       width: 100%;
       background: white;
       ul  {
         width: 100%;
         margin:0;
         padding: 20px 0;
-        background:$red;
+        background:rgba($mainGrey,.9);
         position: absolute;
         top: 0;
+        left: 0;
         z-index: 9999;
       }
       li {
@@ -171,7 +176,7 @@
         width: 100%;
         padding: 7px 0!important;
         text-align: center;
-        color: white;
+        color: $nearBlack;
       }
     }
   }
@@ -197,5 +202,101 @@
   .visible {
     display: block !important;
     opacity: 1!important;
+  }
+}
+
+.menu-holder.color-B {
+
+  .menu-main-menu-container {
+    ul {
+      li {
+        a {
+          color: black;
+          &:hover {
+            text-shadow: 0 0 .65px black, 0 0 .65px black!important;
+          }
+        }
+        &.current-menu-item {
+          a {
+            text-shadow: 0 0 .65px black, 0 0 .65px black!important;
+          }
+        }
+        ul.sub-menu {
+          li {
+            a {
+              color: white;
+              &:hover {
+                text-shadow: 0 0 .65px white, 0 0 .65px white!important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.header-sticky {
+
+  .menu-holder.color-B {
+
+    .menu-main-menu-container {
+      ul {
+        li {
+          a {
+            color: white;
+            &:hover {
+              text-shadow: 0 0 .65px white, 0 0 .65px white!important;
+            }
+          }
+          &.current-menu-item {
+            a {
+              text-shadow: 0 0 .65px white, 0 0 .65px white!important;
+            }
+          }
+          ul.sub-menu {
+            li {
+              a {
+                color: white;
+                &:hover {
+                  text-shadow: 0 0 .65px white, 0 0 .65px white!important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.menu-holder.color-Y {
+
+  .menu-main-menu-container {
+    ul {
+      li {
+        a {
+          color: $main;
+          &:hover {
+            text-shadow: 0 0 .65px $main, 0 0 .65px $main!important;
+          }
+        }
+        &.current-menu-item {
+          a {
+            text-shadow: 0 0 .65px $main, 0 0 .65px $main!important;
+          }
+        }
+      }
+    }
+  }
+}
+.menu-holder.color-W {
+
+  .menu-main-menu-container {
+    ul {
+      li {
+        a {
+          color: white;
+        }
+      }
+    }
   }
 }

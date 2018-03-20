@@ -1,25 +1,10 @@
 .main-content {
+  background: $lightGrey;
+  padding-top: rem(40);
 
   img {
     max-width: 100%;
     height: auto;
-  }
-
-  .featured {
-    text-align: center;
-    @include featured;
-    text-transform: uppercase;
-    margin: 0px -15px 30px -15px;
-    border-bottom: 1px solid $red;
-    padding-bottom: 0px;
-    p {
-      font-size: rem(28);
-      line-height: rem(35);
-      @include sm() {
-        font-size: rem(22);
-        line-height: rem(26);
-      }
-    }
   }
 
   .article {
@@ -182,27 +167,6 @@
       }
     }
 
-  }
-  .article-footer {
-    text-align: center;
-    border-top: 1px solid $red;
-    padding: 20px 0 20px 0;
-    @include featured;
-    text-transform: uppercase;
-    img {
-      margin-bottom: 5px;
-    }
-    p {
-      margin-top: 20px;
-      @include featured;
-      text-transform: uppercase;
-      a {
-        text-decoration: underline;
-      }
-      strong {
-        font-weight: 500;
-      }
-    }
   }
   .article-footer.comp {
     padding: 20px 100px;
